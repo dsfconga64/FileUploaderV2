@@ -1,0 +1,10 @@
+azure:
+  cosmosdb:
+    database: testdb
+    key: Kd6OwEV4CUVIwtv7V5DfrojY2qP0Sp6ySwQcPZNa2qai2y6ZSbhNLtTfC1sGFQI8oAbB4TyJ6nEsSMNabgFC4g==
+    uri: https://testcosmosql.documents.azure.com:443/
+spring:
+  jms:
+    servicebus:
+      connection-string: 'Endpoint=sb://springbus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=v+lLo6q+P2CGDJS0anQ+BNSGn75f/2PS0zxkcM8qF4g='
+      idle-timeout: 1800000
