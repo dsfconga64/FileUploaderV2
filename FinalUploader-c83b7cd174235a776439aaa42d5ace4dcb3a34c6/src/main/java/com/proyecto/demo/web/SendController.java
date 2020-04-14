@@ -23,5 +23,5 @@ public class SendController {
         jmsTemplate.convertAndSend(DESTINATION_NAME, new User(message).getFirstName());
         return message;
     }
-
+//gygyg
 }
