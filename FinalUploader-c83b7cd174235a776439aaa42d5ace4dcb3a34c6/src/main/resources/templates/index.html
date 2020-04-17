@@ -1,0 +1,84 @@
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container-fluid adm-archivos">
+
+
+	<div class="row">
+		<div class="col-md-8"></div>
+
+	</div>
+
+	<br>
+	<form action="#" th:action="@{usuario/registrar}">
+		<div class="form-group">
+			<label for="exampleInputEmail1">Nombre</label> <input type="email"
+				class="form-control" id="firstName"
+				aria-describedby="Nombre" placeholder="Ingrese el  nombre">
+		</div>
+		<div class="form-group">
+			<label for="Apellido">Apellido</label> <input type="email"
+				class="form-control" id="lastName" aria-describedby="Apellido"
+				placeholder="Ingrese el  apellido">
+		</div>
+</div>
+<div class="form-group">
+	<label for="Direccion">Direccion</label> <input type="email"
+		class="form-control" id="address" aria-describedby="Direccion"
+	>
+</div>
+<button type="submit" class="btn btn-primary">Registrar</button>
+</form>
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading text-center">
+				<span><strong><span class="glyphicon glyphicon-hdd"></span>
+						Manejo de archivos</strong> </span>
+			</div>
+			<div class="panel-body">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Nombre de archivo o carpeta</label> <input type="text"
+							class="form-control"> <br>
+
+					</div>
+					<br>
+
+				</div>
+				<div class="col-md-6 subir-archivos">
+					<div class="form-group">
+						<label>Subir archivos</label>
+						<div class="input-group">
+
+							<!-- don't give a name === doesn't send on POST/GET -->
+							<span class="input-group-btn"> <!-- image-preview-input -->
+								<div class="btn btn-default carga-archivo-input">
+									<span class="glyphicon glyphicon-folder-open"></span> <span
+										class="carga-archivo-input-title">Seleccionar archivo</span> <input
+										type="file" accept="image/png, image/jpeg, image/gif"
+										name="input-file-preview" />
+									<!-- rename it -->
+								</div>
+							</span>
+						</div>
+					</div>
+
+
+					<div class="col-md-6">
+						<a class="btn btn-primary btn-block" href="#">Subir archivo</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</div>
+</div>
+</div>
