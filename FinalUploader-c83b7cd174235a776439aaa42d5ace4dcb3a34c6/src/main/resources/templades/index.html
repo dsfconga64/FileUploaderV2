@@ -1,0 +1,209 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container-fluid adm-archivos">
+
+
+    <div class="row">
+        <div class="col-md-8"></div>
+  
+    </div>
+    
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <span><strong><span class="glyphicon glyphicon-folder-open"> </span> Archivos</strong></span>
+                </div>
+                <table class="table table-bordered table-hover vmiddle">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>Nombre</th>
+                            <th>Acciones</th>
+                            <th>Tamaño</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center"><span class="glyphicon glyphicon-file"></span></td>
+                            <td>Listado General de Personas</td>
+                            <td class="text-center">
+                                <a href="#"><span class="btn btn-sm btn-danger glyphicon glyphicon-trash"></span></a>
+                                <a href="#"><span class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></span></a>
+                                <a href="#"><span class="btn btn-sm btn-warning glyphicon glyphicon-info-sign"></span></a>
+                            </td>
+                            <td>523.0 KB </td>
+                            <td>16-sep-16 09:48:2</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center"><span class="glyphicon glyphicon-folder-close"></span></td>
+                            <td>Carta de Entrega</td>
+                            <td class="text-center">
+                                <a href="#"><span class="btn btn-sm btn-danger glyphicon glyphicon-trash"></span></a>
+                                <a href="#"><span class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></span></a>
+                                <a href="#"><span class="btn btn-sm btn-warning glyphicon glyphicon-info-sign"></span></a>
+                            </td>
+                            <td>523.0 KB </td>
+                            <td>16-sep-16 09:48:2</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center"><span class="glyphicon glyphicon-compressed"></span></td>
+                            <td>Carta de Entrega</td>
+                            <td class="text-center">
+                                <a href="#"><span class="btn btn-sm btn-danger glyphicon glyphicon-trash"></span></a>
+                                <a href="#"><span class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></span></a>
+                                <a href="#"><span class="btn btn-sm btn-warning glyphicon glyphicon-info-sign"></span></a>
+                            </td>
+                            <td>523.0 KB </td>
+                            <td>16-sep-16 09:48:2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <span><strong><span class="glyphicon glyphicon-hdd"></span> Manejo de archivos</strong>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Nombre de archivo o carpeta</label>
+                            <input type="text" class="form-control">
+                            <br>
+                            <div>
+                                <a class="btn btn-default">Renombrar</a>
+                                <a class="btn btn-default">Crear carpeta</a>
+                                <a class="btn btn-default">Crear archivo</a>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>Mover a la carpeta</label>
+                                <select class="form-control" id="" name="">
+                                    <option value="volvo">
+                                        Volvo
+                                    </option>
+                                    <option value="saab">
+                                        Saab
+                                    </option>
+                                    <option value="mercedes">
+                                        Mercedes
+                                    </option>
+                                    <option value="audi">
+                                        Audi
+                                    </option>
+                                </select>
+                            </div>
+                            <a href="#" class="btn btn-primary">Mover</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 subir-archivos">
+                        <div class="form-group">
+                            <label>Subir archivos</label>
+                            <div class="input-group">
+                                <input placeholder="" type="text" class="form-control carga-archivo-filename" disabled="disabled">
+                                <!-- don't give a name === doesn't send on POST/GET -->
+                                <span class="input-group-btn"> 
+                                    <!-- image-preview-input -->
+                                    <div class="btn btn-default carga-archivo-input"> 
+                                        <span class="glyphicon glyphicon-folder-open"></span>
+                                        <span class="carga-archivo-input-title">Seleccionar archivo</span>
+                                        <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview" />
+                                        <!-- rename it -->
+                                    </div>
+                                 </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group image-preview">
+                                <input placeholder="" type="text" class="form-control carga-archivo-filename" disabled="disabled">
+                                <span class="input-group-btn"> 
+                                    <div class="btn btn-default carga-archivo-input"> 
+                                        <span class="glyphicon glyphicon-folder-open"></span>
+                                        <span class="carga-archivo-input-title">Seleccionar archivo</span>
+                                        <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview" />
+                                    </div>
+                                </span>
+                            </div>
+                        </div> 
+                        
+                        <div class="form-group">
+                            <div class="input-group image-preview">
+                                <input placeholder="" type="text" class="form-control carga-archivo-filename" disabled="disabled">
+                                <span class="input-group-btn"> 
+                                    <div class="btn btn-default carga-archivo-input"> 
+                                        <span class="glyphicon glyphicon-folder-open"></span>
+                                        <span class="carga-archivo-input-title">Seleccionar archivo</span>
+                                        <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview" />
+                                    </div>
+                                </span>
+                            </div>
+                        </div> 
+                        
+                        <div class="form-group">
+                            <div class="input-group image-preview">
+                                <input placeholder="" type="text" class="form-control carga-archivo-filename" disabled="disabled">
+                                <span class="input-group-btn"> 
+                                    <div class="btn btn-default carga-archivo-input"> 
+                                        <span class="glyphicon glyphicon-folder-open"></span>
+                                        <span class="carga-archivo-input-title">Seleccionar archivo</span>
+                                        <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview" />
+                                    </div>
+                                </span>
+                            </div>
+                        </div> 
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-6">
+                                    Espacio utilizado
+                                </div>
+                                <div class="col-md-6">
+                                    523.0 KB
+                                </div>                                
+                            </div>
+                            <div class="col-md-6">
+                                <a class="btn btn-primary btn-block" href="#">Subir archivo</a>
+                            </div>
+                        </div>                       
+                    </div>                   
+                </div>                
+            </div>
+                      
+        </div>
+    </div>
+</div>
+</div>

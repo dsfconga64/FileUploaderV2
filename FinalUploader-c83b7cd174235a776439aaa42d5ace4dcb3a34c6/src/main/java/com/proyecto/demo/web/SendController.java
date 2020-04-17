@@ -1,12 +1,16 @@
 package com.proyecto.demo.web;
 
+import java.text.ParseException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.proyecto.demo.domain.User;
 
 @RestController
@@ -17,11 +21,13 @@ public class SendController {
 	@Autowired
     private JmsTemplate jmsTemplate;
 
+
+
+	
     @PostMapping("/messages")
     public String postMessage(@RequestParam String message) {
         
         jmsTemplate.convertAndSend(DESTINATION_NAME, new User(message).getFirstName());
         return message;
     }
-//gygyg
 }

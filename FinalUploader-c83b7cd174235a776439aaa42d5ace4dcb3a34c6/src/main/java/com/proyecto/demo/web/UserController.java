@@ -1,11 +1,14 @@
 package com.proyecto.demo.web;
 
+import java.text.ParseException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,6 +32,15 @@ public class UserController {
 	@Autowired
     private JmsTemplate jmsTemplate;
 
+	@RequestMapping("")
+	public String indexPage(Model model) throws ParseException {
+		User user = new User();
+		model.addAttribute("user", new User());
+		model.addAttribute("user", user);
+		return "index";
+	}
+
+	
 	@PostMapping("/user")
 	public ResponseEntity<String> addUser(@RequestBody User newUser) {
 		jmsTemplate.convertAndSend(DESTINATION_NAME, newUser.getFirstName());
@@ -41,5 +53,4 @@ public class UserController {
 		
 		return serv.getAllUsers();
 	}
-	//uhu
 }
