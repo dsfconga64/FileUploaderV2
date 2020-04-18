@@ -54,7 +54,19 @@
           <artifactId>junit-vintage-engine</artifactId> 
         </exclusion> 
       </exclusions> 
-    </dependency> 
+    </dependency>
+    <dependency>
+    	<groupId>com.microsoft.azure</groupId>
+    	<artifactId>spring-azure-starter-storage</artifactId>
+    	<version>1.0.0.M2</version>
+    </dependency>
+    
+    <dependency>
+	   <groupId>com.microsoft.azure</groupId>
+	   <artifactId>spring-azure-starter-storage</artifactId>
+	   <version>1.0.0.M2</version>
+	</dependency>
+    
   </dependencies>  
   <dependencyManagement> 
     <dependencies> 
