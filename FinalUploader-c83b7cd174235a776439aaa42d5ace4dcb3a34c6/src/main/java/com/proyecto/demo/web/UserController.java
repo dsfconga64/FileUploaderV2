@@ -26,11 +26,11 @@ public class UserController {
 
 	@Autowired
 	UserService serv;
-
+	
 	private static final String DESTINATION_NAME = "testqueue";
 
 	@Autowired
-	private JmsTemplate jmsTemplate;
+    private JmsTemplate jmsTemplate;
 
 	@RequestMapping("")
 	public String indexPage(Model model) throws ParseException {
@@ -40,17 +40,17 @@ public class UserController {
 		return "index";
 	}
 
-	@PostMapping("/usuario/registrar")
-	public String addUser(@RequestBody User newUser) {
+	
+	@PostMapping("/user")
+	public ResponseEntity<String> addUser(@RequestBody User newUser) {
 		jmsTemplate.convertAndSend(DESTINATION_NAME, newUser.getFirstName());
 		serv.saveUser(newUser);
-		return "redirect:/Test/";
-
+		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
-
+	
 	@RequestMapping(value = "/user", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public Flux<User> getUser() {
-
+		
 		return serv.getAllUsers();
 	}
 }
